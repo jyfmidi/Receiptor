@@ -1,0 +1,33 @@
+<view class="weui-cells">
+  <view class="weui-cell">
+    <view class="weui-cell__bd">姓名</view>
+    <text class="weui-cell__ft" selectable="true">{{userInfo.name}}</text>
+  </view>
+  <view class="weui-cell">
+    <view class="weui-cell__bd">性别</view>
+    <text class="weui-cell__ft" selectable="true">{{userInfo.gender}}</text>
+  </view>
+  <view class="weui-cell">
+    <view class="weui-cell__bd">工号</view>
+    <text class="weui-cell__ft" selectable="true">{{userInfo.workId}}</text>
+  </view>
+  <view class="weui-cell">
+    <view class="weui-cell__bd">部门</view>
+    <text class="weui-cell__ft" selectable="true">{{userInfo.department}}</text>
+  </view>
+  <view class="weui-cell">
+    <view class="weui-cell__bd">职位</view>
+    <text class="weui-cell__ft" selectable="true">{{userInfo.position}}</text>
+  </view>
+  <view class="weui-cell">
+    <view class="weui-cell__bd">手机</view>
+    <text class="weui-cell__ft" selectable="true">{{userInfo.phone}}</text>
+  </view>
+  <view class="weui-cell">
+    <view class="weui-cell__bd">邮箱</view>
+    <text class="weui-cell__ft" selectable="true">{{userInfo.email}}</text>
+  </view>
+</view>
+<view class="weui-cells__tips">
+  若发现信息有误，请及时联系管理员修改
+</view>

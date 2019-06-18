@@ -1,0 +1,100 @@
+<!--index.wxml-->
+
+<view class="weui-cells">
+  <navigator url="../personalInfo/personalInfo" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="user-cell__hd">
+      <view class="user-info__avatar">
+          <open-data type="userAvatarUrl"></open-data>
+      </view>
+    </view>  
+
+    <view class="weui-cell__bd">
+      <view class="user-info__name">
+        <open-data type="userNickName"></open-data>
+      </view>
+      <view class="font-gray-28">
+        查看个人信息
+      </view>
+    </view>
+
+     <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+</view>
+
+<view class="weui-cells">
+  <navigator url="../personalInfo/personalInfo" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__hd">
+      <image src="/images/index-new-project.png" class="icon"></image>
+    </view>
+    <view class="weui-cell__bd">添加新项目</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+
+  <navigator url="../personalInfo/personalInfo" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__hd">
+      <image src="/images/index-browse-projects.png" class="icon"></image>
+    </view>
+    <view class="weui-cell__bd">查看所有项目</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+</view>  
+
+<view class="weui-cells">
+  <navigator url="../personalInfo/personalInfo" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__hd">
+      <image src="/images/index-new-transaction.png" class="icon"></image>
+    </view>
+    <view class="weui-cell__bd">添加新账目</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+
+  <navigator url="../personalInfo/personalInfo" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__hd">
+      <image src="/images/index-browse-transactions.png" class="icon"></image>
+    </view>
+    <view class="weui-cell__bd">查看所有账目</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+</view>  
+
+<view class="weui-cells">  
+  <navigator url="../personalInfo/personalInfo" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__hd">
+      <image src="/images/index-chart.png" class="icon"></image>
+    </view>
+    <view class="weui-cell__bd">统计</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+</view>  
+
+  <!-- 上传图片 -->
+  <!-- <view class="uploader">
+    <view class="uploader-text" bindtap="doUpload">
+      <text>上传图片</text>
+    </view>
+    <view class="uploader-container" wx:if="{{imgUrl}}">
+      <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
+    </view>
+  </view> -->
+
+
+  <!-- 操作数据库 -->
+  <!-- <view class="uploader">
+    <navigator url="../databaseGuide/databaseGuide" open-type="navigate" class="uploader-text">
+      <text>前端操作数据库</text>
+    </navigator>
+  </view> -->
+
+  <!-- 新建云函数 -->
+  <!-- <view class="uploader">
+    <navigator url="../addFunction/addFunction" open-type="navigate" class="uploader-text">
+      <text>快速新建云函数</text>
+    </navigator>
+  </view> -->
+
+  <!-- 云调用 -->
+  <!-- <view class="uploader">
+    <navigator url="../openapi/openapi" open-type="navigate" class="uploader-text">
+      <text>云调用</text>
+    </navigator>
+  </view> -->
