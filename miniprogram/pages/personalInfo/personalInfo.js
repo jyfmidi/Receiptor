@@ -27,12 +27,12 @@ Page({
         app.globalData.openid = res.result.openid
         const db = wx.cloud.database()
         db.collection('Users').where({
-          _openid: app.globalData.openid
+          openid: app.globalData.openid
         }).get({
           success: res => {
             if (res.data.length === 0 || res.data[0]['_openid'] != app.globalData.openid) {
               wx.showToast({
-                icon: 'success',
+                icon: 'none',
                 title: '抱歉，操作权限不足，请联系管理员',
                 duration: 1500,
                 mask: true,

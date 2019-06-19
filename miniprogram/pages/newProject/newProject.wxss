@@ -1,0 +1,5 @@
+/* miniprogram/pages/newProject/newProject.wxss */
+
+.weui-bth-area {
+  padding-top: 1em
+}

@@ -22,7 +22,7 @@
 </view>
 
 <view class="weui-cells">
-  <navigator url="../personalInfo/personalInfo" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+  <navigator url="../newProject/newProject" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
     <view class="weui-cell__hd">
       <image src="/images/index-new-project.png" class="icon"></image>
     </view>
@@ -30,7 +30,7 @@
     <view class="weui-cell__ft weui-cell__ft_in-access"></view>
   </navigator>
 
-  <navigator url="../personalInfo/personalInfo" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+  <navigator url="../browseProjects/browseProjects" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
     <view class="weui-cell__hd">
       <image src="/images/index-browse-projects.png" class="icon"></image>
     </view>
@@ -40,7 +40,7 @@
 </view>  
 
 <view class="weui-cells">
-  <navigator url="../personalInfo/personalInfo" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+  <navigator url="../newTransaction/newTransaction" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
     <view class="weui-cell__hd">
       <image src="/images/index-new-transaction.png" class="icon"></image>
     </view>
@@ -48,7 +48,7 @@
     <view class="weui-cell__ft weui-cell__ft_in-access"></view>
   </navigator>
 
-  <navigator url="../personalInfo/personalInfo" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+  <navigator url="../browseTransactions/browseTransactions" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
     <view class="weui-cell__hd">
       <image src="/images/index-browse-transactions.png" class="icon"></image>
     </view>

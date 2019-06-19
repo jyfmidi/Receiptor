@@ -1,9 +1,13 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/entrance/entrance",
-    "pages/insertEntry/insertEntry",
-    "pages/personalInfo/personalInfo"
+    "pages/register/register",
+    "pages/index/index",
+    "pages/personalInfo/personalInfo",
+    "pages/newProject/newProject",
+    "pages/browseProjects/browseProjects",
+    "pages/browseTransactions/browseTransactions",
+    "pages/newTransaction/newTransaction"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

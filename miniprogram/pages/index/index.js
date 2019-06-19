@@ -22,10 +22,11 @@ Page({
       name: 'login',
       data: {},
       success: res => {
+        console.log(res)
         app.globalData.openid = res.result.openid
         const db = wx.cloud.database()
         db.collection('Users').where({
-          _openid: app.globalData.openid
+          openid: app.globalData.openid
         }).get({
           success: res => {
             if (res.data.length === 0) {

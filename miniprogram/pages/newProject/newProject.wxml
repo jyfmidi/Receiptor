@@ -1,0 +1,45 @@
+<view class="weui-cells">
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">
+        项目名称
+      </view>
+    </view>  
+    <view class="weui-cell__bd">
+      <input class = "weui-input" placeholder="请输入项目名" bindinput="onInput" data-label="name">
+      </input>
+    </view>
+  </view>
+
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">
+        项目简介
+      </view>
+    </view>  
+    <view class="weui-cell__bd">
+      <input class = "weui-input" placeholder="请简要描述" bindinput="onInput" data-label="description">
+      </input>
+    </view>
+  </view>
+
+  <view class="weui-cell weui-cell_select">
+    <view class="weui-cell__hd weui-cell__hd_in-select-after">
+      <view class="weui-label">创建者</view>
+    </view>
+    <view class="weui-cell__bd">
+      <picker bindchange="bindOwnerChange" value="{{ownerIndex}}" range="{{owners}}">
+        <view class="weui-select weui-select_in-select-after">
+          {{owners[ownerIndex]}}
+        </view>
+      </picker>
+    </view>
+  </view>    
+  
+</view>
+
+<view class="weui-bth-area">
+  <button class="weui-btn" type="primary" catchtap="onSubmit">
+    创建新项目
+  </button>
+</view>

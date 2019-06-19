@@ -10,6 +10,12 @@ export const USER_STATUS_APPROVED = 1 // 审核通过
 export const USER_STATUS_REJECTED = 2 // 审核未通过
 
 /**
+ * 用户账号权限
+ */
+export const USER_PERMISSION_ADMIN = 0 // 管理员
+export const USER_PERMISSION_OTHER = 1 // 普通用户
+
+/**
  * 项状态
  */
 export const ENTRY_STATUS_REVIEWING = 0 // 审核中
@@ -17,8 +23,7 @@ export const ENTRY_STATUS_APPROVED = 1 // 审核通过
 export const ENTRY_STATUS_REJECTED = 2 // 审核未通过
 
 /**
- * 用户与项关系
+ * 账单金额出入
  */
-export const UE_NO_RELATION = 0 // 没有任何关系
-export const UE_IS_CREATOR = 1 // 创建者
-export const UE_IS_OTHER = 2 // 相关人员
+export const TRANSACTION_IN = 0 // 收入
+export const TRANSACTION_OUT = 1 // 支出
