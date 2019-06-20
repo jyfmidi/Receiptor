@@ -75,10 +75,6 @@ Page({
               console.log('[数据库] [新增用户] 成功：', res)
             },
             fail: err => {
-              wx.showToast({
-                icon: 'none',
-                title: '新增记录失败'
-              })
               console.error('[数据库] [新增用户] 失败：', err)
             }
           })

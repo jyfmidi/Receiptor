@@ -1,8 +1,10 @@
 {
   "pages": [
+
     "pages/entrance/entrance",
-    "pages/register/register",
     "pages/newProject/newProject",
+    "pages/register/register",
+    "pages/newProject/subpages/success",
     "pages/index/index",
     "pages/personalInfo/personalInfo",
     "pages/browseProjects/browseProjects",

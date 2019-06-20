@@ -2,7 +2,7 @@
 
 import { USER_STATUS_REVIEWING, USER_STATUS_APPROVED, USER_STATUS_REJECTED } from '../../utils/constants'
 
-const app = getApp()
+var app = getApp()
 Page({
   data: {
     openid: '',
