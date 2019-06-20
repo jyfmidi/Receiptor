@@ -72,7 +72,7 @@ Page({
                 mask: true,
                 success: function () {
                   setTimeout(function () {
-                    wx.navigateTo({
+                    wx.redirectTo({
                       url: '../register/register',
                     })
                   }, 2000)
@@ -81,13 +81,13 @@ Page({
             } else {
               // 正式用户，跳转到主页
               wx.showToast({
-                icon: 'success',
-                title: '您好，' + res.data[0]['name'],
+                icon: 'none',
+                title: '校验成功。您好，' + res.data[0]['name'],
                 duration: 1500,
                 mask: true,
                 success: function() {
                   setTimeout(function() {
-                    wx.navigateTo({
+                    wx.redirectTo({
                       url: '../index/index',
                     })
                   },1500)

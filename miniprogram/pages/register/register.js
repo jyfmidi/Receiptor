@@ -5,20 +5,13 @@ import { USER_STATUS_REVIEWING, USER_PERMISSION_OTHER } from '../../utils/consta
 const app = getApp()
 
 const db = wx.cloud.database()
-const collection_user = db.collection("Users")
+const collection_users = db.collection("Users")
 
 
 Page({
   data: {
     genders: ["", "男", "女"],
-    genderIndex: 0,
-    name: '',
-    workId: '',
-    department: '',
-    position: '',
-    phone: '',
-    email: '',
-    gender: ''
+    genderIndex: 0
   },
 
   inputName(e) {
@@ -50,23 +43,19 @@ Page({
   },
 
   bindGenderChange: function (e) {
-    console.log(this)
     this.setData({
       genderIndex: e.detail.value
     }),
-    this.setData({
-      gender: this.data.genders[e.detail.value]
-    })
+    this.gender= this.data.genders[e.detail.value]
   },
 
   register() {
-    console.log(app)
-    collection_user.where({
+    collection_users.where({
       _openid: app.globalData.openid
     }).get({
       success: res => {
         if (res.data.length == 0) {
-          collection_user.add({
+          collection_users.add({
             data: {
               name: this.name,
               gender: this.gender,
@@ -80,9 +69,8 @@ Page({
               permission: USER_PERMISSION_OTHER
             },
             success: res => {
-              wx.showToast({
-                icon: 'success',
-                title: '信息已提交'
+              wx.redirectTo({
+                url: 'subpages/success',
               })
               console.log('[数据库] [新增用户] 成功：', res)
             },

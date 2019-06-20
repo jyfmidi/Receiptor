@@ -27,7 +27,7 @@ Page({
         app.globalData.openid = res.result.openid
         const db = wx.cloud.database()
         db.collection('Users').where({
-          openid: app.globalData.openid
+          _openid: app.globalData.openid
         }).get({
           success: res => {
             if (res.data.length === 0 || res.data[0]['_openid'] != app.globalData.openid) {
