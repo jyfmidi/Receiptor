@@ -42,4 +42,7 @@
   <button class="weui-btn" type="primary" catchtap="submit">
     创建新项目
   </button>
+  <button class="weui-btn" type="default" catchtap="redirectToIndex">
+    返回首页
+  </button>
 </view>

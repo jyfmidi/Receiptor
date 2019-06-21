@@ -1,13 +1,13 @@
-// miniprogram/pages/newProject/subpages/success.js
+// miniprogram/pages/newTransaction/subpages/success.js
 Page({
-  viewProject: function () {
+  viewTransaction: function () {
     wx.redirectTo({
       url: '../../index/index'
     })
   },
-  newProject: function () {
+  newTransaction: function () {
     wx.navigateTo({
-      url: '../newProject'
+      url: '../newTransaction'
     })
   },
   redirectToIndex: function () {

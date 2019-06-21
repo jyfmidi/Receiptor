@@ -14,12 +14,18 @@ Page({
   },
 
   onLoad: function (options) {
+
     if (!wx.cloud) {
       wx.redirectTo({
         url: '../chooseLib/chooseLib',
       })
       return
     }
+
+    wx.showLoading({
+      title: '校验用户身份中...',
+      mask: true
+    })
 
     // 获取用户信息
     wx.getSetting({
@@ -48,7 +54,8 @@ Page({
           _openid: app.globalData.openid
         }).get({
           success: res => {
-            // 待验证用户，不跳转
+            wx.hideLoading()
+            // 已经注册但未审核通过用户，不跳转
             if (res.data.length > 0 && res.data[0]['status'] == USER_STATUS_REVIEWING) {
               wx.showToast({
                 icon: 'none',
@@ -57,6 +64,7 @@ Page({
                 mask: true
               })
             } else if (res.data.length > 0 && res.data[0]['status'] == USER_STATUS_REJECTED) {
+              // 无权限用户，不跳转
               wx.showToast({
                 icon: 'none',
                 title: '抱歉，您的信息未通过审核，若有问题请联系管理员',

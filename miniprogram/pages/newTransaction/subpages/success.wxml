@@ -4,13 +4,13 @@
             <icon type="success" size="93"></icon>
         </view>
         <view class="weui-msg__text-area">
-            <view class="weui-msg__title">新项目创建成功</view>
-            <view class="weui-msg__desc">查看该项目添加账目</view>
+            <view class="weui-msg__title">新账目创建成功</view>
+            <view class="weui-msg__desc">管理员会尽快审核</view>
         </view>
         <view class="weui-msg__opr-area">
             <view class="weui-btn-area">
-                <button class="weui-btn" type="primary" bindtap="viewProject">查看该项目</button>
-                <button class="weui-btn" type="primary" bindtap="newProject">继续添加</button>
+                <button class="weui-btn" type="primary" bindtap="viewTransaction">查看该账目详情</button>
+                <button class="weui-btn" type="primary" bindtap="newTransaction">继续添加</button>
                 <button class="weui-btn" type="default" bindtap="redirectToIndex">返回首页</button>
             </view>
         </view>

@@ -1,5 +1,5 @@
 // miniprogram/pages/newProject/newProject.js
-import { ENTRY_STATUS_REVIEWING, USER_STATUS_APPROVED } from '../../utils/constants'
+import { PROJECT_STATUS_INPROCESSING, USER_STATUS_APPROVED } from '../../utils/constants'
 
 const app = getApp()
 
@@ -41,6 +41,10 @@ Page({
     // })
   },
 
+  redirectToIndex: function () {
+    wx.navigateBack()
+  },
+
   inputName(e) {
     this.name =  e.detail.value
   },
@@ -73,7 +77,7 @@ Page({
               create_timestamp: timestamp,
               update_timestamp: timestamp,
 
-              status: ENTRY_STATUS_REVIEWING
+              status: PROJECT_STATUS_INPROCESSING
             },
             success: res => {
               wx.redirectTo({

@@ -1,1 +1,5 @@
 /* miniprogram/pages/newTransaction/newTransaction.wxss */
+
+.weui-bth-area {
+  padding-top: 1em
+}

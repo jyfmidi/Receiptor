@@ -18,6 +18,9 @@ Page({
       })
       return
     }
+    this.setData({
+      openid: app.globalData.openid
+    })
   },
 
 })

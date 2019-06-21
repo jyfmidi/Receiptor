@@ -1,2 +1,85 @@
-<!--miniprogram/pages/newTransaction/newTransaction.wxml-->
-<text>miniprogram/pages/newTransaction/newTransaction.wxml</text>
+<view class="weui-cells">
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">
+        账目名称
+      </view>
+    </view>  
+    <view class="weui-cell__bd">
+      <input class = "weui-input" placeholder="请输入账目名" bindinput="inputName" data-label="name">
+      </input>
+    </view>
+  </view>
+
+  <view class="weui-cell weui-cell_select">
+    <view class="weui-cell__hd weui-cell__hd_in-select-after">
+      <view class="weui-label">归属项目</view>
+    </view>
+    <view class="weui-cell__bd">
+      <picker bindchange="bindProjectChange" value="{{projectIndex}}" range="{{projectNames}}">
+        <view class="weui-select weui-select_in-select-after">
+          {{projectNames[projectIndex]}}
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">
+        金额
+      </view>
+    </view>  
+    <view class="weui-cell__bd">
+      <input class = "weui-input" placeholder="请填写金额" bindinput="inputAmount" data-label="amount">
+      </input>
+    </view>
+  </view>
+
+  <view class="weui-cell weui-cell_select">
+    <view class="weui-cell__hd weui-cell__hd_in-select-after">
+      <view class="weui-label">收入/支出</view>
+    </view>
+    <view class="weui-cell__bd">
+      <picker bindchange="bindFlowChange" value="{{flowIndex}}" range="{{flowNames}}">
+        <view class="weui-select weui-select_in-select-after">
+          {{flowNames[flowIndex]}}
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">
+        发票号
+      </view>
+    </view>  
+    <view class="weui-cell__bd">
+      <input class = "weui-input" placeholder="请填写发票号" bindinput="inputReceiptNumber" data-label="receiptNumber">
+      </input>
+    </view>
+  </view>  
+
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">
+         备注
+      </view>
+    </view>  
+    <view class="weui-cell__bd">
+      <input class = "weui-input" placeholder="请简要描述" bindinput="inputDescription" data-label="description">
+      </input>
+    </view>
+  </view>
+  
+</view>
+
+<view class="weui-bth-area">
+  <button class="weui-btn" type="primary" catchtap="submit">
+    创建新账目
+  </button>
+  <button class="weui-btn" type="default" catchtap="redirectToIndex">
+    返回首页
+  </button>
+</view>
