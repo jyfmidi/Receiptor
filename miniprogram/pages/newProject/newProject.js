@@ -68,6 +68,10 @@ Page({
       success: res => {
         // 验证用户是否存在
         if (res.data.length > 0) {
+          wx.showLoading({
+            title: '提交中...',
+            mask: true
+          })
           const timestamp = new Date().getTime();
           collection_projects.add({
             data: {
@@ -80,6 +84,7 @@ Page({
               status: PROJECT_STATUS_INPROCESSING
             },
             success: res => {
+              wx.hideLoading()
               wx.redirectTo({
                 url: 'subpages/success',
               })

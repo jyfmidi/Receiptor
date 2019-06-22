@@ -92,6 +92,10 @@ Page({
       success: res => {
         // 验证用户是否存在
         if (res.data.length > 0) {
+          wx.showLoading({
+            title: '提交中...',
+            mask: true
+          })
           const timestamp = new Date().getTime();
           collection_transactions.add({
             data: {
@@ -109,6 +113,7 @@ Page({
               flow_direction: this.data.flowIds[this.data.flowIndex]
             },
             success: res => {
+              wx.hideLoading()
               wx.redirectTo({
                 url: 'subpages/success',
               })
