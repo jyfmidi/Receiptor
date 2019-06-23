@@ -1,16 +1,17 @@
 {
   "pages": [
+
+    "pages/projectList/projectList",
     "pages/entrance/entrance",
     "pages/newProject/newProject",
     "pages/register/register",
     "pages/newProject/subpages/success",
     "pages/index/index",
     "pages/personalInfo/personalInfo",
-    "pages/browseProjects/browseProjects",
-    "pages/browseTransactions/browseTransactions",
     "pages/newTransaction/newTransaction",
     "pages/register/subpages/success",
-    "pages/newTransaction/subpages/success"
+    "pages/newTransaction/subpages/success",
+    "pages/transactionList/transactionList"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

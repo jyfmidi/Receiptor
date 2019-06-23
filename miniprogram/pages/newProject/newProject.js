@@ -77,7 +77,7 @@ Page({
             data: {
               name: this.name,
               description: this.description,
-              owner_id: res.data[0]['_id'],
+              owner: res.data[0],
               create_timestamp: timestamp,
               update_timestamp: timestamp,
 

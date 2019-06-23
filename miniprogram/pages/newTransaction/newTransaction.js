@@ -11,9 +11,8 @@ const collection_transactions = db.collection("Transactions")
 
 Page({
   data: {
-    // 隐式：可选项目 _id 数组
-    projectIds: [],
-    // 显式：前端选择项目时，显示项目名字用的数组（一一对应上方 projectIds）
+    projects: [],
+    // 前端选择项目时，显示项目名字用的数组（一一对应上方 projects）
     projectNames: [],
     // 当前选中项目的下标
     projectIndex: 0,
@@ -33,16 +32,16 @@ Page({
       status: PROJECT_STATUS_INPROCESSING
     }).get({
       success: res => {
-        var ids = ["0"]
+        let that = this
         var names = ["请选择该账目所属项目"]
         for (var i = 0; i < res.data.length; i++){
-          ids.push(res.data[i]._id)
           names.push(res.data[i].name)
         }
-        this.setData({
-          projectIds: ids,
+        that.setData({
+          projects: res.data,
           projectNames: names
         })
+        
         wx.hideLoading()
       },
       fail: err => {
@@ -104,8 +103,8 @@ Page({
               receipt_number: this.receiptNumber,
               amount: this.amount,
 
-              owner_id: res.data[0]['_id'],
-              project_id: this.data.projectIds[this.data.projectIndex],
+              owner: res.data[0],
+              project: this.data.projects[this.data.projectIndex-1],
               create_timestamp: timestamp,
               update_timestamp: timestamp,
 
