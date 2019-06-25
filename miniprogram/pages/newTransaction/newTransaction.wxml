@@ -2,11 +2,11 @@
   <view class="weui-cell weui-cell_input">
     <view class="weui-cell__hd">
       <view class="weui-label">
-        账目名称
+        名称
       </view>
     </view>  
     <view class="weui-cell__bd">
-      <input class = "weui-input" placeholder="请输入账目名" bindinput="inputName" data-label="name">
+      <input class = "weui-input" placeholder="请输入名称" bindinput="inputName" data-label="name">
       </input>
     </view>
   </view>
@@ -46,6 +46,18 @@
           {{flowNames[flowIndex]}}
         </view>
       </picker>
+    </view>
+  </view>
+
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">
+        收款方
+      </view>
+    </view>  
+    <view class="weui-cell__bd">
+      <input class = "weui-input" placeholder="请填写收款方账户" bindinput="inputReceiver" data-label="receiver">
+      </input>
     </view>
   </view>
 

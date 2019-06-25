@@ -1,8 +1,10 @@
 {
   "pages": [
-
     "pages/projectList/projectList",
     "pages/entrance/entrance",
+    "pages/transactionList/transactionList",
+    "pages/transactionItem/transactionItem",
+    "pages/projectItem/projectItem",    
     "pages/newProject/newProject",
     "pages/register/register",
     "pages/newProject/subpages/success",
@@ -10,8 +12,7 @@
     "pages/personalInfo/personalInfo",
     "pages/newTransaction/newTransaction",
     "pages/register/subpages/success",
-    "pages/newTransaction/subpages/success",
-    "pages/transactionList/transactionList"
+    "pages/newTransaction/subpages/success"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

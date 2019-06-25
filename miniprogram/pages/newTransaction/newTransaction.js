@@ -70,6 +70,10 @@ Page({
     this.amount = e.detail.value
   },
 
+  inputReceiver(e) {
+    this.receiver = e.detail.value
+  },
+
 
   bindProjectChange: function (e) {
     this.setData({
@@ -100,13 +104,15 @@ Page({
             data: {
               name: this.name,
               description: this.description,
-              receipt_number: this.receiptNumber,
-              amount: this.amount,
+              number: this.receiptNumber,
+              amount: parseInt(this.amount),
+              receiver: this.receiver,
 
               owner: res.data[0],
               project: this.data.projects[this.data.projectIndex-1],
               create_timestamp: timestamp,
               update_timestamp: timestamp,
+
 
               status: TRANSACTION_STATUS_REVIEWING,
               flow_direction: this.data.flowIds[this.data.flowIndex]

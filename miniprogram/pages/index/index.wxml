@@ -48,7 +48,7 @@
     <view class="weui-cell__ft weui-cell__ft_in-access"></view>
   </navigator>
 
-  <navigator url="../browseTransactions/browseTransactions" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+  <navigator url="../transactionList/transactionList" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
     <view class="weui-cell__hd">
       <image src="/images/index-browse-transactions.png" class="icon"></image>
     </view>
@@ -57,7 +57,7 @@
   </navigator>
 </view>  
 
-<view class="weui-cells">  
+<!-- <view class="weui-cells">  
   <navigator url="../personalInfo/personalInfo" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
     <view class="weui-cell__hd">
       <image src="/images/index-chart.png" class="icon"></image>
@@ -65,7 +65,7 @@
     <view class="weui-cell__bd">统计</view>
     <view class="weui-cell__ft weui-cell__ft_in-access"></view>
   </navigator>
-</view>  
+</view>   -->
 
   <!-- 上传图片 -->
   <!-- <view class="uploader">
