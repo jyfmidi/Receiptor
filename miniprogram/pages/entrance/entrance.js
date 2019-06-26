@@ -88,6 +88,7 @@ Page({
               })
             } else {
               // 正式用户，跳转到主页
+              app.globalData.userInfo = res.data[0]
               wx.showToast({
                 icon: 'none',
                 title: '校验成功。您好，' + res.data[0]['name'],

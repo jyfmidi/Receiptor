@@ -9,7 +9,6 @@
         </view>
         <view class="weui-msg__opr-area">
             <view class="weui-btn-area">
-                <button class="weui-btn" type="primary" bindtap="viewTransaction">查看该账目详情</button>
                 <button class="weui-btn" type="primary" bindtap="newTransaction">继续添加</button>
                 <button class="weui-btn" type="default" bindtap="redirectToIndex">返回首页</button>
             </view>
